@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
 import { SyntheticEvent, MouseEvent } from 'react'
-import { DEFAULT_IMAGE_PATH } from '../constants/constant'
-import { AuthService } from '../services/auth'
+import { DEFAULT_IMAGE_PATH } from '../../constants/constant'
+import { AuthService } from '../../services/auth'
 
 interface NavigationProps {
   // TODO: 仮置きなので、別の場所で再定義

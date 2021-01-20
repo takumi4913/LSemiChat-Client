@@ -1,8 +1,8 @@
 import { useRouter } from "next/dist/client/router";
 import { useState, ChangeEvent, MouseEvent } from "react";
 import { PrimaryButton } from "../components/button";
-import { InputText } from "../components/formField";
-import Form from "../components/layout/form";
+import { InputText } from "../components/form/formField";
+import Form from "../components/form/form";
 import Layout from "../components/layout/layout";
 import { AuthInfo, AuthService } from "../services/auth";
 

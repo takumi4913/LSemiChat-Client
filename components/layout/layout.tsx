@@ -5,8 +5,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { User, UserService } from '../../services/user'
-import Navigation from '../navigation'
-import SideBar from '../sidebar'
+import Navigation from '../navigation/navigation'
+import SideBar from '../sidebar/sidebar'
 
 interface LayoutProps {
   children: React.ReactNode,
