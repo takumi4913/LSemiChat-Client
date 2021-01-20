@@ -2,10 +2,11 @@
 
 ## 初回起動
 
-サーバの起動
+ローカルでサーバの起動
+サーバのリポジトリは[こちら](https://github.com/lsemichat/LSemiChat-Server)
 ```
 // リポジトリのDL
-$ git clone 
+$ git clone {サーバのリポジトリ}
 $ cd LSemiChat-Server
 // サーバの起動。初回時結構時間がかかる。docker-compose or makeコマンドで
 $ docker-compose up -d
