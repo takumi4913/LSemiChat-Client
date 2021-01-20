@@ -4,7 +4,7 @@ import { UserService } from "../services/user";
 
 export default function DashBoard() {
   return (
-    <Layout>
+    <Layout requiredAuth={true}>
       <h1>Dashboard</h1>
       <Link href="/rooms/create">
         <a>Create Room</a>

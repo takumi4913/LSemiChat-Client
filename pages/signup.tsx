@@ -44,7 +44,7 @@ export default function SignUpForm() {
   }
 
   return (
-    <Layout>
+    <Layout requiredAuth={false}>
       <Form method="POST" title="サインアップ" errorStack={errorStack}>
         <InputText
           type="text"

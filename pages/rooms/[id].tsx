@@ -2,7 +2,7 @@ import Layout from "../../components/layout/layout";
 
 export default function RoomDialog() {
   return (
-    <Layout>
+    <Layout requiredAuth={true}>
       Dialog
     </Layout>
   )

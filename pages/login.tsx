@@ -33,7 +33,7 @@ export default function LoginForm() {
   }
 
   return (
-    <Layout>
+    <Layout requiredAuth={false}>
       <Form method="POST" title="ログイン" errorStack={errorStack}>
         <InputText
           type="text"

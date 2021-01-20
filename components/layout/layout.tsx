@@ -10,13 +10,15 @@ import SideBar from '../sidebar'
 
 interface LayoutProps {
   children: React.ReactNode,
+  requiredAuth: boolean
 }
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children, requiredAuth }: LayoutProps) {
   const router = useRouter()
   const [user, setUser] = useState({})
 
   useEffect(() => {
+    if (!requiredAuth) return
     const res = UserService.getInstance().getSelf()
     res.then(data => {
       if (data.status && data.status !== 200) {
@@ -43,11 +45,16 @@ export default function Layout({ children }: LayoutProps) {
       {/* navigation */}
       <Navigation
         user={user}
+        isAuth={requiredAuth}
       />
 
       {/* container */}
       <div className="container">
-        <SideBar/>
+        {
+          requiredAuth
+            ? <SideBar />
+            : <></>
+        }
         <div className="content-wrapper">
           <div className="content">{ children }</div>
         </div>
