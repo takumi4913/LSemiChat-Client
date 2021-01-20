@@ -1,0 +1,45 @@
+@import "../styles/variables.scss";
+
+.form {
+  width: 40%;
+}
+
+.textarea {
+  border: 2px solid $sub-color;
+  background-color: transparent;
+  border-radius: 5px;
+  min-height: 5rem;
+  font-size: .9rem;
+  width: 100%;
+}
+
+.inputText {
+  font-size: .9rem;
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid $sub-color;
+  background-color: transparent;
+  color: $main-color;
+  width: 100%;
+  &:focus {
+    outline: none;
+  }
+}
+
+.inputLabel {
+  font-size: small;
+  color: $sub-color;
+}
+
+.errorbar {
+  background-color: $danger-bg-color;
+  color: $danger-color;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.errorList {
+  margin: 0;
+  padding-inline-start: 30px;
+}
