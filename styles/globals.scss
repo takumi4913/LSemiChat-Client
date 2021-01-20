@@ -319,12 +319,16 @@ body {
 }
 
 .content-wrapper {
-  margin-left: $sidebar-width;
+  // margin-left: $sidebar-width;
   width: 100%;
 }
 
 .content {
   margin: 10px 20px;
+}
+
+.sidebar-wrapper + .content-wrapper {
+  margin-left: $sidebar-width;
 }
 
 // TODO: これ以下に追加していくと良いかも

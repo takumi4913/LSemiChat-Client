@@ -1,4 +1,4 @@
-import { postRequest } from './common'
+import { deleteRequest, postRequest } from './common'
 
 export interface AuthInfo {
   userId: string,
@@ -20,5 +20,9 @@ export class AuthService {
       password: body.password
     }
     return postRequest("/login", reqBody)
+  }
+
+  public async logout(): Promise<any> {
+    return deleteRequest("/logout")
   }
 }

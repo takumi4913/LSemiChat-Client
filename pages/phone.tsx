@@ -1,9 +1,10 @@
+import { NotImplement } from "../components/errors";
 import Layout from "../components/layout/layout";
 
-export default function Rooms() {
+export default function Phone() {
   return (
     <Layout requiredAuth={true}>
-      Room一覧
+      <NotImplement />
     </Layout>
   )
 }

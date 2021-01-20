@@ -17,7 +17,7 @@ export async function putRequest(path: string, body?: object) {
 
 export async function deleteRequest(path: string) {
   const res = await fetch(newRequest(path, "DELETE"))
-  return res.json()
+  return res
 }
 
 const newRequest = (path: string, method: "GET" | "POST" | "PUT" | "DELETE", body?: object) => {

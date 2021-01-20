@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useState, MouseEvent, ChangeEvent, SyntheticEvent } from 'react'
 import Link from 'next/link'
-import { DEFAULT_IMAGE_PATH } from '../constants/constant'
+import { DEFAULT_IMAGE_PATH } from '../../constants/constant'
 
 // TODO: 仮置き
 interface RoomProps {
@@ -13,6 +13,7 @@ interface RoomProps {
   summary: string,
 }
 
+// TODO: apiから取得する
 const ROOMS: Array<RoomProps> = [
   {
     id: "1",
