@@ -23,6 +23,7 @@ $ make dev-log-api
 ```
 // リポジトリのclone
 $ git clone {このリポジトリ}
+$ cd LSemiChat-Client
 // 依存パッケージのインストール
 $ npm ci
 // devサーバの起動
