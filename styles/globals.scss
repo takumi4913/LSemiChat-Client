@@ -11,6 +11,7 @@ body {
   min-height: 100%;
 }
 
+
 .h1, .h2, .h3, .h4, .h5, .h6 {
   display: inline-block;
   font-weight: 400;
@@ -207,6 +208,11 @@ body {
   &-36 {
     width: 36px;
     height: 36px;
+  }
+  &-150 {
+    width: 150px;
+    height: 150px;
+    margin: 0px 0px 0px 20px;
   }
 }
 
@@ -524,4 +530,20 @@ body {
       }
     }
   }
+}
+
+.profile-user-name{
+  display: inline;
+  font-size: 50px;
+  font-weight: 1000;
+  margin: 0px 0px 0px 50px;
+  vertical-align: top;
+}
+
+.follow{
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 1000;
+  margin: 0px 0px 0px 0px;
+  text-align: left; 
 }

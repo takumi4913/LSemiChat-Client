@@ -1,4 +1,6 @@
-import { deleteRequest, postRequest } from './common'
+import { deleteRequest, postRequest, getRequest } from './common'
+import React from "react";
+import Talk from "talkjs";
 
 export interface AuthInfo {
   userId: string,
@@ -24,5 +26,38 @@ export class AuthService {
 
   public async logout(): Promise<any> {
     return deleteRequest("/logout")
+  }
+}
+
+export class Home extends React.Component{
+  constructor(props){
+    super(props);
+
+    if(process.browser){
+      this.session=this.makeTalkSession();
+    }
+    this.chatContainerRef=React.createRef();
+  }
+
+  public async makeTalkSession(){
+    await Talk.ready;
+    const me=new Talk.User({
+      id:"5",
+      name:"SampleMan",
+      role:"buyer"
+    });
+    return new Talk.Session({
+      appId:"tw3Ra4qD",
+      me
+    });
+  }
+
+  public async componentDidMount(){
+    const session=await this.session;
+    const coversation=session.getOrCreateConversation("87654");
+    conversation.setParticipant(session.me);
+
+    const chatbox=session.createChatbox(conversation);
+    chatbox.mount(this.chatContainerRef.current);
   }
 }

@@ -9,6 +9,31 @@ export interface User {
   password: string,
 }
 
+export interface editUser{
+  name: string,
+  mail: string,
+  profile : string,
+  password: string,
+}
+
+export class editUserService{
+  // REF: singleton pettern: https://typescript-jp.gitbook.io/deep-dive/main-1/singleton
+  private static _instance: editUserService
+  static getInstance(): editUserService{
+    if (!editUserService._instance) {
+      editUserService._instance = new editUserService()
+    }
+    return editUserService._instance
+  }
+
+  public async create(user: editUser): Promise<any> {
+    const neweditUser = {
+      name: user.name,
+    }
+    return postRequest("/account", neweditUser)
+  }
+}
+
 export class UserService {
   // REF: singleton pettern: https://typescript-jp.gitbook.io/deep-dive/main-1/singleton
   private static _instance: UserService

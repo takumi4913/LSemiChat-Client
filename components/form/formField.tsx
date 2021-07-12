@@ -16,6 +16,12 @@ interface TextareaProps {
   handleChange(evt: ChangeEvent<HTMLTextAreaElement>): void,
 }
 
+interface Outputarea{
+  name: string,
+  label: string,
+  value: string,
+}
+
 export function InputText(props: TextProps) {
   return (
     <div className="mb-10">
@@ -35,6 +41,14 @@ export function InputTextarea(props: TextareaProps) {
       </div>
       <textarea className={styles.textarea} value={props.value} name={props.name} onChange={props.handleChange}>
       </textarea>
+    </div>
+  )
+}
+
+export function OutputTextarea(props: Outputarea){
+  return(
+    <div>
+      <textarea className={styles.textarea} value={props.value} name={props.name}></textarea>
     </div>
   )
 }

@@ -82,7 +82,7 @@ export default function SignUpForm() {
         />
         <InputText
           type="password"
-          name="cPassword"
+          name="Password"
           label="確認用パスワード(require)"
           value={formConfirmPassword}
           handleChange={(evt: ChangeEvent<HTMLInputElement>) => setFormConfirmPassword(evt.target.value)}
@@ -107,3 +107,5 @@ function validation(userId: string, name: string, mail: string, profile: string,
 
   return errorStack
 }
+
+export type signup_output={formConfirmPassword}
